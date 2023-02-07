@@ -28,11 +28,11 @@ def stats() -> str:
 
 @app_views.route('/unauthorized/', methods=['GET'], strict_slashes=False)
 def unauthorized_handler() -> str:
-  """ This method aborts the request with error 401"""
-  abort(401)
+    """ This method aborts the request with error 401"""
+    abort(401)
 
 
 @app_views.route('/forbidden/', methods=['GET'], strict_slashes=False)
 def forbidden_handler() -> str:
-  """ This method aborts the request with error 401"""
-  abort(403)
+    """ This method aborts the request with error 401"""
+    abort(403)
