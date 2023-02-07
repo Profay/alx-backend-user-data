@@ -8,7 +8,7 @@ from typing import List, TypeVar
 class Auth:
     """ This class provides authentication"""
 
-    def require_auth(self, path: str, excluded_paths: List[str], strict_slashes=False) -> bool:
+    def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """ Highlight the given path"""
         if path is None or excluded_paths is None:
             return True
