@@ -49,9 +49,9 @@ def before_request() -> str:
     ]
     if auth.require_auth(path, excluded_paths):
         return
-    if auth.authorization_header(request):
+    if auth.authorization_header(request) is None:
         abort(401)
-    if auth.current_user(request):
+    if auth.current_user(request) is None:
         abort(403)
 
 if __name__ == "__main__":
