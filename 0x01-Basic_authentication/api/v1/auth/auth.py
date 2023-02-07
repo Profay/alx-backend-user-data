@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-""" This module contains auth functions"""
-
+""" This module contains auth functions
+"""
 from flask import request
-from typing import *
+from typing import List, TypeVar
 
 
 class Auth:
