@@ -18,6 +18,7 @@ if getenv('AUTH_TYPE', None) == 'auth':
     from api.v1.auth.auth import Auth
     auth = Auth()
 
+
 @app.errorhandler(404)
 def not_found(error) -> str:
     """ Not found handler
@@ -38,8 +39,10 @@ def forbidden(error) -> str:
     """
     return jsonify({"error": "Forbidden"}), 403
 
+
 @app.before_request
 def before_request() -> str:
+    """ handling before request """
     if auth is None:
         return
     excluded_paths = [
