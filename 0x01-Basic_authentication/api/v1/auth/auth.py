@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """ This module contains auth functions"""
 
-
 from flask import request
 from typing import *
 
@@ -15,8 +14,8 @@ class Auth:
 
     def authorization_header(self, request=None) -> str:
         """ This function takes the header) """
-        return request
+        return None
 
     def current_user(self, request=None) -> TypeVar('User'):
         """ This function takes the current user """
-        return request
+        return None
