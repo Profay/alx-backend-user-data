@@ -73,3 +73,4 @@ class BasicAuth(Auth):
         extract = self.extract_user_credentials(dec_header)
         user = self.user_object_from_credentials(
                 extract[0], extract[1])
+        return user
