@@ -2,7 +2,7 @@
 """ This module contains auth functions
 """
 from flask import request
-from typing import List, TypeVar
+from typing import List, Pattern, TypeVar
 
 
 class Auth:
@@ -20,9 +20,9 @@ class Auth:
     def authorization_header(self, request=None) -> str:
         """ This function takes the header) """
         if request is not None:
-            return request.headers.get('Authorozation', None)
+            return request.headers.get('Authorization', None)
         return None
 
     def current_user(self, request=None) -> TypeVar('User'):
         """ This function takes the current user """
-        return None
+        None
